@@ -100,9 +100,7 @@ namespace LexicalAnalyzer.Analyzers
                             {
                                 token += src[i];
                                 i++;
-                                statusTemp = -1;
-                                status = 20;
-                                type = "ERROR";
+                                status = 2;
                             }
                             break;
 
