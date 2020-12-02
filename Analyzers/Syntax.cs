@@ -110,5 +110,62 @@ namespace LexicalAnalyzer.Analyzers
             return result;
         }
 
+        public string AnalizeRefactor()
+        {
+            string result = "";
+            this.stack.Add("0");
+            int item = 0;
+            int contador = 0;
+            while (contador < tokens.Count)
+            {
+                item = GetItemFromTableAt(Int32.Parse(stack.Last()), tokens[contador].TokenId + 1);
+                if (item < 0)//Es regla, hay que sacar de la lista
+                {
+                    if (item == -1)
+                    {
+                        result = "RESULTADO CORRECTO";
+                        break;
+                    }
+                    var ruleNumber = Math.Abs(item) - 1;
+                    var rule = rules.Where(r => r.RuleNumber == ruleNumber).FirstOrDefault();
+                    var itemsToDrop = rule.NumOfItems * 2;
+
+                    var extractedElements = stack.GetRange(stack.Count() - itemsToDrop, stack.Count());
+
+                    //get node element
+
+                    stack = stack.GetRange(0, stack.Count() - itemsToDrop);
+
+                    stack.Add(rule.RuleIdentifier.ToString());
+
+                    item = GetItemFromTableAt(Int32.Parse(stack[stack.Count - 2]), Int32.Parse(stack.Last()) + 1);
+                    stack.Add(item.ToString());
+                }
+                else if (item > 0)//Es desplazamiento
+                {
+                    stack.Add(tokens[contador].Type);//Agrega el tipo de token
+                    stack.Add((GetItemFromTableAt(GetLastItem(stack), tokens[contador].TokenId + 1)).ToString());//Agrega
+                    contador++;
+                }
+                else
+                {
+                    result = "RESULTADO INCORRECTO CON " + tokens[contador].Name;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
+        //Change from int to Node
+        public int GetItemFromTableAt(int number, int elementNumber)
+        {
+            return this.table[number, elementNumber];
+        }
+
+        public int GetLastItem(List<string> _stack)
+        {
+            return Int32.Parse(_stack.Last());
+        }
     }
 }
