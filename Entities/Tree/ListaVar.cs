@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace LexicalAnalyzer.Entities.Tree
 {
-    public class ListaVar
+    public class ListaVar : Nodo
     {
-        public string Id { get; set; }
-        public ListaVar ListaVar { get; set; }
+        public object Id { get; set; }
+        public object listaVar { get; set; }
+        public ListaVar(List<Nodo> elements, int ruleNumber)
+        {
+            Id = elements[3];
+            listaVar = elements[1];
+            TokenId = ruleNumber;
+        }
     }
 }

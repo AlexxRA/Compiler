@@ -275,15 +275,15 @@ namespace LexicalAnalyzer.Analyzers
                 case "/": type = "Division"; break;
                 case "*": type = "Multiplicacion"; break;
 
-                case "if": 
-                case "while": 
-                case "return": 
-                case "else": 
+                case "if": type = "ClaseIf"; break;
+                case "while": type = "ClaseWhile"; break;
+                case "return": type = "ClaseReturn"; break;
+                case "else": type = "ClaseElse"; break;
                 case "const": type = "id"; break;
-                case "int":
-                case "float":
-                case "char":
-                case "void": type = "tipo"; break;
+                case "int": type = "int"; break;
+                case "float": type = "float"; break;
+                case "char": type = "char"; break;
+                case "void": type = "void"; break;
                 default: type="id"; break;
             }
 

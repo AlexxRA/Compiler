@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +54,40 @@
     <Compile Include="Analyzers\Syntax.cs" />
     <Compile Include="Entities\Rule.cs" />
     <Compile Include="Entities\Token.cs" />
+    <Compile Include="Entities\Tree\Argumentos.cs" />
+    <Compile Include="Entities\Tree\BloqFunc.cs" />
+    <Compile Include="Entities\Tree\Bloque.cs" />
+    <Compile Include="Entities\Tree\DefLocal.cs" />
+    <Compile Include="Entities\Tree\DefLocales.cs" />
+    <Compile Include="Entities\Tree\ExpresionLlamadaFunc.cs" />
+    <Compile Include="Entities\Tree\ExpresionLogico.cs" />
+    <Compile Include="Entities\Tree\ExpresionMul.cs" />
+    <Compile Include="Entities\Tree\ExpresionParentesis.cs" />
+    <Compile Include="Entities\Tree\ExpresionSuma.cs" />
+    <Compile Include="Entities\Tree\ListaArgumentos.cs" />
+    <Compile Include="Entities\Tree\LlamadaFunc.cs" />
+    <Compile Include="Entities\Tree\Otro.cs" />
+    <Compile Include="Entities\Tree\ExpresionConstante.cs" />
+    <Compile Include="Entities\Tree\ExpresionRelacion.cs" />
+    <Compile Include="Entities\Tree\Programa.cs" />
+    <Compile Include="Entities\Tree\SentenciaIf.cs" />
+    <Compile Include="Entities\Tree\SentenciaLlamadaFunc.cs" />
+    <Compile Include="Entities\Tree\SentenciaReturn.cs" />
+    <Compile Include="Entities\Tree\Sentencias.cs" />
+    <Compile Include="Entities\Tree\SentenciaWhile.cs" />
+    <Compile Include="Entities\Tree\DefFunc.cs" />
+    <Compile Include="Entities\Tree\Definicion.cs" />
+    <Compile Include="Entities\Tree\Definiciones.cs" />
+    <Compile Include="Entities\Tree\DefVar.cs" />
+    <Compile Include="Entities\Tree\ExpresionId.cs" />
+    <Compile Include="Entities\Tree\INodo.cs" />
+    <Compile Include="Entities\Tree\ListaParam.cs" />
+    <Compile Include="Entities\Tree\ListaVar.cs" />
+    <Compile Include="Entities\Tree\Nodo.cs" />
+    <Compile Include="Entities\Tree\Parametros.cs" />
+    <Compile Include="Entities\Tree\SentenciaAsignacion.cs" />
+    <Compile Include="Entities\Tree\SentenciaBloque.cs" />
+    <Compile Include="Entities\Tree\TablaSimbolos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +108,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

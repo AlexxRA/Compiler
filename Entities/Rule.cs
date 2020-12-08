@@ -11,5 +11,6 @@ namespace LexicalAnalyzer.Entities
         public int RuleNumber { get; set; }
         public int NumOfItems { get; set; }
         public int RuleIdentifier { get; set; }
+        public string RuleName { get; set; }
     }
 }

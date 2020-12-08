@@ -40,16 +40,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(857, 247);
+            this.textBox1.Size = new System.Drawing.Size(857, 468);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(691, 281);
+            this.button1.Location = new System.Drawing.Point(691, 486);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 62);
             this.button1.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.Id});
             this.dataGridView1.Location = new System.Drawing.Point(887, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(345, 440);
+            this.dataGridView1.Size = new System.Drawing.Size(345, 536);
             this.dataGridView1.TabIndex = 4;
             // 
             // Token
@@ -88,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 297);
+            this.label1.Location = new System.Drawing.Point(12, 524);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 24);
             this.label1.TabIndex = 5;
@@ -98,7 +98,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 464);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1266, 574);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
